@@ -29,7 +29,7 @@ public class Series {
         SeriesModel series = new SeriesModel(id, name, ageRestriction, episodeCount);
         seriesList.add(series);
 
-        System.out.println("✔️ Series successfully added.\n");
+        System.out.println("Series successfully added.\n");
     }
 
     public static void findSeriesById() {
@@ -65,7 +65,7 @@ public class Series {
             System.out.print("New Number of Episodes: ");
             series.SeriesNumberOfEpisodes = scanner.nextLine();
 
-            System.out.println("✔️ Series updated.");
+            System.out.println("Series updated.");
         } else {
             System.out.println("Series ID not found.");
         }
@@ -81,7 +81,7 @@ public class Series {
             String confirm = scanner.nextLine();
             if (confirm.equalsIgnoreCase("Y")) {
                 seriesList.remove(toDelete);
-                System.out.println("✔️ Series removed.");
+                System.out.println("Series removed.");
             } else {
                 System.out.println("Deletion cancelled.");
             }
@@ -104,11 +104,9 @@ public class Series {
     }
 
     public static void closeApp() {
-        System.out.println("Application closed.");
+        System.out.println("Application exited.");
         System.exit(0);
     }
-
-    // === Helper Methods ===
 
     static SeriesModel getSeries(String id) {
         for (SeriesModel s : seriesList) {
